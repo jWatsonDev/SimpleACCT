@@ -1,0 +1,102 @@
+﻿body {
+    margin: 20px 50px;
+}
+
+.invoice {
+    width: 900px;
+}
+
+    .invoice > h1 {
+        height: 40px;
+        padding-top: 5px;
+        text-align: center;
+        font-size: 1.5em;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-weight: 600;
+        background: black;
+        color: white;
+    }
+
+.customer {
+    margin-top: 50px;
+}
+
+.customer-address {
+    display: inline-block;
+}
+
+.customer-name {
+    font-weight: bold;
+    float: left;
+    margin-top: -10px;
+}
+
+.invoice-meta td, .items td, .items > table {
+    border: solid 1px;
+    border-collapse: collapse;
+    padding: 7px;
+}
+
+.invoice-meta {
+    float: right;
+    margin: 5px;
+}
+
+    .invoice-meta td:nth-child(odd), .items thead {
+        background: #ccc;
+    }
+
+    .invoice-meta td:nth-child(even) {
+        text-align: right;
+        width: 70%;
+        padding-right: 10px;
+    }
+
+    .invoice-meta td:nth-child(odd) {
+        padding-right: 20px;
+    }
+
+.invoice-meta {
+    padding-bottom: 30px;
+}
+
+.items .blank {
+    border: none;
+}
+
+.terms {
+    text-align: center;
+    width: 100%;
+}
+
+    .terms h2 {
+        border-bottom: 1px solid;
+        font-weight: normal;
+        letter-spacing: 7px;
+        font-size: 1em;
+        padding-bottom: 5px;
+    }
+
+    .terms p {
+        padding: 5px 10px;
+        margin: 0;
+        display: inline-block;
+    }
+
+[contenteditable] {
+    padding: 5px;
+}
+
+    [contenteditable]:hover, [contenteditable]:focus {
+        background: lightyellow;
+    }
+
+div[contenteditable]:hover, div[contenteditable]:focus, p[contenteditable]:hover, p[contenteditable]:focus {
+    outline: 2px solid palegoldenrod;
+}
+
+td[contenteditable]:hover, td[contenteditable]:focus {
+    border: 1px solid darkgoldenrod;
+    border-collapse: separate;
+}

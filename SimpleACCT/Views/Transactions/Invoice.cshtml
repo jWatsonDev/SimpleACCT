@@ -1,0 +1,90 @@
+﻿@model SimpleACCT.Models.ViewModels.CategoryTransactionViewModel
+@{
+    Layout = null;
+}
+
+<h1></h1>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/editable-invoice.css" />
+    <title>Invoice</title>
+</head>
+<body>
+    <div class="invoice">
+        <h1>invoice</h1>
+        <div contenteditable class="customer-address">
+            @Model.Category.Name <br>
+            123 Appleseed  <br>
+            Appleville, WI 53719 <br>
+            Phone: (555) 555-5555 <br>
+        </div>
+        <div class="customer">
+            <div contenteditable class="customer-name">
+                Widget Corp.<br>
+                c/o Steve Widget
+            </div>
+
+            <div class="invoice-meta">
+                <table>
+                    <tr>
+                        <td>Invoice #</td>
+                        <td contenteditable>000123</td>
+                    </tr>
+                    <tr>
+                        <td>Date</td>
+                        <td contenteditable>@Model.Transaction.DateAdded</td>
+                    </tr>
+                    <tr>
+                        <td>Amount Due</td>
+                        <td>$875.00</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="items">
+                <table>
+                    <thead>
+                        <td>Item</td>
+                        <td>Description</td>
+                        <td>Unit Cost</td>
+                        <td>Quantity</td>
+                        <td>Price</td>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td contenteditable>@Model.Category.Name</td>
+                            <td contenteditable>@Model.Category.Description</td>
+                            <td contenteditable>@Model.Transaction.Amount</td>
+                            <td contenteditable>1</td>
+                            <td>$650.00</td>
+                        </tr>
+
+                        
+                        <tr>
+                            <td colspan="2" class="blank"> </td>
+                            <td colspan="2">Amount Paid</td>
+                            <td contenteditable>$0.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="blank"> </td>
+                            <td colspan="2">Balance Due</td>
+                            <td>$875.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="terms">
+                <h2>Terms</h2>
+                <p contenteditable>NET 30 Days. Finance Charge of 1.5% will be made on unpaid balances after 30 days.</p>
+            </div>
+
+        </div>
+</body>
+</html>
+@*https://codepen.io/jamesbarnett/pen/qKixB*@
